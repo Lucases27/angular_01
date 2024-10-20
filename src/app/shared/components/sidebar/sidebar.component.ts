@@ -15,7 +15,7 @@ export class SidebarComponent {
   }
 
   getTagHistory(): string[] {
-    return this.tagHistory = this.gifsService.getTagsHistory();
+    return this.gifsService.getTagsHistory();
   }
 
  }
