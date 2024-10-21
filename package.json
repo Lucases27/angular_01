@@ -10,7 +10,7 @@
     "test": "ng test",
     "delete:docs": "del docs",
     "copy:dist1": "copyfiles dist/demoapp/browser/assets/* ./docs/browser/assets -f",
-    "copy:dist": "copyfiles dist/demoapp/browser/* ./docs/browser -f",
+    "copy:dist": "copyfiles dist/demoapp/browser/* ./docs/browser -f && copyfiles dist/demoapp/browser/* ./docs -f",
     "copy:dist2": "copyfiles dist/demoapp/browser/assets/* ./docs/assets -f",
     "build:github": "npm run delete:docs && npm run build:href && npm run copy:dist1 && npm run copy:dist && npm run copy:dist2"
   },
