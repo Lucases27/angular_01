@@ -1,0 +1,4 @@
+.no-underline {
+  text-decoration: none;
+  color: inherit; /* Para que el color del texto sea el mismo que el del párrafo */
+}

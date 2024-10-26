@@ -1,16 +1,15 @@
 <div class="card mb-2 text-center bg-dark">
-  <shared-lazy-image
-    [url]="gif.images.downsized_medium.url"
-    [alt]="gif.title || 'No name'">
-  ></shared-lazy-image>
-
-
-
-
+  <div>
+    <a [href]="gif.url" target="_blank">
+      <shared-lazy-image
+        [url]="gif.images.downsized_medium.url"
+        [alt]="gif.title || 'No name'">
+      ></shared-lazy-image>
+    </a>
+  </div>
   <div class="card-body text-white">
     <p class="card-text">
-      {{gif.title}}
+      <a [href]="gif.url" target="_blank" class="no-underline">{{ gif.title }}</a>
     </p>
   </div>
 </div>
-

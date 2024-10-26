@@ -4,6 +4,7 @@ import { Gif } from '../../../interfaces/gifs.interfaces';
 @Component({
   selector: 'gifs-card',
   templateUrl: './card.component.html',
+  styleUrl: './card.component.css',
 })
 export class CardComponent implements OnInit {
   ngOnInit(): void {
