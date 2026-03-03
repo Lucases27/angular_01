@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 
 import { GifsService } from './../../../gifs/services/gifs.service';
+import { ThemeService, Theme } from './../../../services/theme.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'shared-sidebar',
@@ -9,9 +11,13 @@ import { GifsService } from './../../../gifs/services/gifs.service';
 })
 export class SidebarComponent {
   tagHistory: string[] = [];
+  theme$: Observable<Theme>;
 
-  constructor(private gifsService : GifsService) {
-
+  constructor(
+    private gifsService : GifsService,
+    private themeService: ThemeService
+  ) {
+    this.theme$ = this.themeService.theme$;
   }
 
   getTagHistory(): string[] {
@@ -20,6 +26,10 @@ export class SidebarComponent {
 
   searchTag(tag: string): void {
     this.gifsService.searchTag(tag);
+  }
+
+  toggleTheme(): void {
+    this.themeService.toggleTheme();
   }
 
  }
